@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Confirmation</title>
+</head>
+<body>
+
+<span th:text="${student.firstName + ' ' + student.lastName}" />. your registration is now complete!
+<br><br>
+
+Age: <span th:text="${student.age}" />
+<br><br>
+
+Gender: <span th:text="${student.gender}" />
+<br><br>
+
+Postal code: <span th:text="${student.postalCode}" />
+<br><br>
+
+Course code: <span th:text="${student.registrationCode}" />
+
+
+</body>
+</html>

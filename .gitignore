@@ -1,0 +1,39 @@
+#################
+## Ignore list
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+## gradle stuff
+gradlew
+.gradle/
+gradle/
+build/
+gradlew.bat
+
+## Maven stuff
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/
+
+## IDEA configs
+*.iml
+/idea/
+.idea/
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Misc Stuff
+.DS_Store
+*.log
+*.log.*

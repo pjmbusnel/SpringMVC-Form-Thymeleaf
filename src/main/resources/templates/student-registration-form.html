@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        .error {color:orangered}
+    </style>
+</head>
+
+<body>
+<h3>Hi Student, please fill your information to register for the semester.</h3>
+<br><br>
+<form th:action="@{/students/processRegistration}" th:object="${student}" method="POST">
+
+    First name: <input type="text" th:field="*{firstName}" /> *
+    <span th:if="${#fields.hasErrors('firstName')}"
+          th:errors="*{firstName}" class="error"></span>
+    <br><br>
+
+    Last name: <input type="text" th:field="*{lastName}" /> *
+    <span th:if="${#fields.hasErrors('lastName')}"
+          th:errors="*{lastName}" class="error"></span>
+    <br><br>
+
+    Age: <input type="text" th:field="*{age}" />
+    <span th:if="${#fields.hasErrors('age')}"
+          th:errors="*{age}" class="error"></span>
+    <br><br>
+
+    Gender: <select th:field="*{gender}">
+        <option th:each="tempGender : ${genders}" th:value="${tempGender}" th:text="${tempGender}" />
+    </select>>
+    <br><br>
+
+    Zip Code: <input type="text" th:field="*{postalCode}" /> *
+    <span th:if="${#fields.hasErrors('postalCode')}"
+          th:errors="*{postalCode}"  class="error"></span>
+    <br><br>
+
+    Course IFT Code: <input type="text" th:field="*{registrationCode}" />
+    <span th:if="${#fields.hasErrors('registrationCode')}"
+          th:errors="*{registrationCode}" class="error"></span>
+    <br><br>
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
